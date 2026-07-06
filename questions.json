@@ -536,32 +536,50 @@
           "id": "q20",
           "num": "20",
           "statement": "Quelles sont les catégories effectives comportant le plus de clients ?",
-          "expectedCols": null,
-          "expectedRows": null,
-          "expectedLabel": null,
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple (PRIVILEGIE)",
           "orderSensitive": false,
-          "hashesSorted": [],
+          "hashesSorted": [
+            "5360c9d0038d2bd82e580a921d6c07fa505b1cbccc088e8d6183be38d668d0c4"
+          ],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
-          "sameAs": null,
-          "theoryNote": "Requête Oracle - non auto-évaluable en ligne (à exécuter sous Oracle)."
+          "difficulty": 3,
+          "tags": [
+            "groupement",
+            "calcul-vertical",
+            "imbrication",
+            "sous-requête",
+            "extrémum",
+            "null",
+            "cte"
+          ],
+          "sameAs": null
         },
         {
           "type": "question",
           "id": "q21",
           "num": "21",
           "statement": "Quels sont les pays pour lesquels il y a le plus de réservations ?",
-          "expectedCols": null,
-          "expectedRows": null,
-          "expectedLabel": null,
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
           "orderSensitive": false,
-          "hashesSorted": [],
+          "hashesSorted": [
+            "b6dcb5f8df12d7bb62319613fe0f3d5efb2aa24c8ecf47f5a14d19fb14f5a35f"
+          ],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
-          "sameAs": null,
-          "theoryNote": "Requête Oracle - non auto-évaluable en ligne (à exécuter sous Oracle)."
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "imbrication",
+            "sous-requête",
+            "extrémum",
+            "cte"
+          ],
+          "sameAs": null
         },
         {
           "type": "question",

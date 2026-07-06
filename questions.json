@@ -1,0 +1,867 @@
+{
+  "formatVersion": 1,
+  "tdId": "r2.06-td2",
+  "tdLabel": "R2.06 - TD2",
+  "title": "Requêtes avec SQL",
+  "intro": "Vérifiez que lors du TD précédent, vous avez laissé la base de données dans l'état initial ou réinitialisez-là. Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
+  "database": {
+    "name": "voyages",
+    "schemaFile": "data/schema.sql",
+    "insertFile": "data/insert.sql"
+  },
+  "canon": {
+    "algo": "sha256",
+    "specVersion": 1
+  },
+  "sections": [
+    {
+      "name": "Jointures externes",
+      "items": [
+        {
+          "type": "question",
+          "id": "q1",
+          "num": "1",
+          "statement": "Donnez les numéros et noms des clients ainsi que leurs éventuels identifiants des voyages et dates de réservation datant d'avant le 10/11/2003.",
+          "expectedCols": 4,
+          "expectedRows": 34,
+          "expectedLabel": "4 attributs, 34 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "d0296caac229865a7ffac0b69aa062a2f968afe92a48aaa0f6c7fee9bca36dd2"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q2",
+          "num": "2",
+          "statement": "En s'inspirant de la requête précédente, donnez les numéros et noms des clients ainsi que leurs éventuels identifiants des voyages et dates de réservation qui n'ont jamais réservé avant le 10/11/2003.",
+          "expectedCols": 4,
+          "expectedRows": 24,
+          "expectedLabel": "4 attributs, 24 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "2e8215cb16efea9b7b5006b9bfe30785f8aef1a9e01e640b3b2d6dcf1dc047dc"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q3",
+          "num": "3",
+          "statement": "Formulez les variations de requêtes suivantes de deux manières différentes :",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q3a",
+          "num": "3a",
+          "statement": "Donnez les numéros et ville de résidence des clients ainsi que les identifiants, villes de départ et pays d'arrivée d'éventuels voyages partant de leur ville de résidence.",
+          "expectedCols": 5,
+          "expectedRows": 215,
+          "expectedLabel": "5 attributs, 215 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "66b691751ea906027b720d8490a70ca4a54edd87579f90008df56cfab4073938"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q3b",
+          "num": "3b",
+          "statement": "Donnez les identifiants, villes de départ et pays d'arrivée des voyages ainsi que les éventuels numéros et ville de résidence des clients résidant dans les villes de départ des voyages.",
+          "expectedCols": 5,
+          "expectedRows": 215,
+          "expectedLabel": "5 attributs, 215 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a6cbeb76ce62b50c5a4f2ce183deadce0e2526719c3c37331681ea1a70afecd8"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4",
+          "num": "4",
+          "statement": "Formulez les variations de requêtes suivantes à la manière de votre choix :",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q4a",
+          "num": "4a",
+          "statement": "Donnez les numéros et ville de résidence des clients ainsi que les identifiants, villes de départ et pays d'arrivée d'éventuels voyages à destination du Kenya partant de la ville de résidence des clients.",
+          "expectedCols": 5,
+          "expectedRows": 46,
+          "expectedLabel": "5 attributs, 46 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "7ac3de3695015bb86c13e50fddaf28cf6b58ebe1d0e53b45a151f17f08c458a4"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4b",
+          "num": "4b",
+          "statement": "Donnez les identifiants, villes de départ et pays d'arrivée des voyages à destination du Kenya ainsi que les éventuels numéros et ville de résidence des clients résidant dans les villes de départ des voyages.",
+          "expectedCols": 5,
+          "expectedRows": 39,
+          "expectedLabel": "5 attributs, 39 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "fe1f385e890d9e0b6f63d2fe158725470f2428862d5048ce1c122bc772980d9b"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4c",
+          "num": "4c",
+          "statement": "Donnez les numéros et ville de résidence des clients de numéro supérieur à 2200 ainsi que les identifiants, villes de départ et pays d'arrivée d'éventuels voyages partant de la ville de résidence des clients.",
+          "expectedCols": 5,
+          "expectedRows": 30,
+          "expectedLabel": "5 attributs, 30 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "78795964ba352403e634dcf48137eab55b831bb53ad2b3d7a2dac04b495836bd"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4d",
+          "num": "4d",
+          "statement": "Donnez les identifiants, villes de départ et pays d'arrivée des voyages ainsi que les éventuels numéros et ville de résidence des clients de numéro supérieur à 2200 résidant dans les villes de départ des voyages.",
+          "expectedCols": 5,
+          "expectedRows": 41,
+          "expectedLabel": "5 attributs, 41 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e762caca7f63d749a5133888c5ee9e459f6f31bb92094d4fa68aede8d54707a3"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q5",
+          "num": "5",
+          "statement": "Donnez les numéros et ville de résidence des clients ainsi que les identifiants, villes de départ et pays d'arrivée d'éventuels voyages de clients habitant une ville d'où ne part aucun voyage pour le Kenya.",
+          "expectedCols": 5,
+          "expectedRows": 8,
+          "expectedLabel": "5 attributs, 8 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "6774d530d646bbc24bb671fa7951f6ea856005ea2f608260a3612d0dfa9adea0"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure-externe",
+            "sélection",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q6",
+          "num": "6",
+          "statement": "Donnez les identifiants, villes de départ et pays d'arrivée des voyages ainsi que les éventuels numéros et ville de résidence des clients pour les voyages ne comportant aucun client de numéro supérieur à 2200 résidant dans les villes de départ.",
+          "expectedCols": 5,
+          "expectedRows": 14,
+          "expectedLabel": "5 attributs, 14 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "6c39713da52afa9ebb1cf06e28f7580492beb208db59c669e2085b7f395fbf77"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure-externe",
+            "sélection",
+            "null"
+          ],
+          "sameAs": null
+        }
+      ]
+    },
+    {
+      "name": "Opérations de partitionnement",
+      "items": [
+        {
+          "type": "question",
+          "id": "q7",
+          "num": "7",
+          "statement": "Donnez, par pays d'arrivée, le nombre de voyages.",
+          "expectedCols": 2,
+          "expectedRows": 7,
+          "expectedLabel": "2 attributs, 7 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "9a67e98ce6e2005a8586437ccd20460745815f54e7e235de108c4a020ef237e3"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q8",
+          "num": "8",
+          "statement": "Donnez, par pays et ville d'arrivée, le nombre de voyages.",
+          "expectedCols": 3,
+          "expectedRows": 15,
+          "expectedLabel": "3 attributs, 15 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "794b624d17acaa774ed18fa59bfd7c8c807b1a4f73c98af9d15568cfb6617ecb"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q9",
+          "num": "9",
+          "statement": "Donnez, pour chaque pays d'arrivée, le nombre de villes.",
+          "expectedCols": 2,
+          "expectedRows": 7,
+          "expectedLabel": "2 attributs, 7 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "de17d5cf88ee75f1f9cd097cfce04ca6bacfe64dea005b79d3b7e3a14f729488"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "groupement",
+            "calcul-vertical",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q10",
+          "num": "10",
+          "statement": "Donnez, pour chaque identifiant et ville d'arrivée de voyage, le nombre de dates planifiées.",
+          "expectedCols": 3,
+          "expectedRows": 15,
+          "expectedLabel": "3 attributs, 15 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "f034f1f9741018173273e8bda27d4ae26f3edf0f5ed2555828f61faa26d009d2"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q11",
+          "num": "11",
+          "statement": "Donnez, pour chaque identifiant et ville d'arrivée de voyage, le nombre d'options gratuites.",
+          "expectedCols": 3,
+          "expectedRows": 11,
+          "expectedLabel": "3 attributs, 11 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "d0e2d8192d64db50864c528855aa073d90fef2b8074dd4537104666745d3a979"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "sélection",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q12",
+          "num": "12",
+          "statement": "Donnez, par catégorie effective, le nombre de clients.",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "974991c1920b98a1b31b697383c0b76bd63e7e1b08466bf05c2d141dbc01b948"
+          ],
+          "hashOrdered": null,
+          "difficulty": 1,
+          "tags": [
+            "groupement",
+            "calcul-vertical",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q13",
+          "num": "13",
+          "statement": "Donnez, par identifiant de voyage et ville d'arrivée, le nombre de voyages réservés et le nombre total de personnes.",
+          "expectedCols": 4,
+          "expectedRows": 9,
+          "expectedLabel": "4 attributs, 9 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e59d6b6a92ff6e4264e0c2224c4952cff6d8f86e33f1edb2f614aa1fac623ee1"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q14",
+          "num": "14",
+          "statement": "Donnez, par voyage, le prix moyen effectif des options.",
+          "expectedCols": 2,
+          "expectedRows": 7,
+          "expectedLabel": "2 attributs, 7 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "4337e7f78397ebb0fff2c3ca5d658a2a65fef904f81005b9ce44c054241c91ba"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q15",
+          "num": "15",
+          "statement": "Donnez, pour chaque identifiant de voyage et ville d'arrivée, le nombre d'options gratuites et le nombre d'options payantes.",
+          "expectedCols": 4,
+          "expectedRows": 6,
+          "expectedLabel": "4 attributs, 6 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "09c8d8f83769f2711d738d3099f170fc3a7273d7235f1ff2f34468d91a3dc668"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q16",
+          "num": "16",
+          "statement": "Donnez, par ville de résidence, et lorsque son nombre est supérieur à cinq, le nombre de clients.",
+          "expectedCols": 2,
+          "expectedRows": 2,
+          "expectedLabel": "2 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "f4b6a09e8f721a751b957a7395afc6e28d19ff0d08707a04601ec160a5bc136a"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q17",
+          "num": "17",
+          "statement": "Quel est, pour chaque identifiant de voyage et pays d'arrivée, le montant total, tenant compte du nombre de personnes, réglé par les clients ?",
+          "expectedCols": 3,
+          "expectedRows": 9,
+          "expectedLabel": "3 attributs, 9 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "84a9bc31f4932998c40d7e2b497bf739bb654537cb4459b585bf0abad8b68925"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q18",
+          "num": "18",
+          "statement": "Quel est, pour chaque identifiant de voyage et date de départ planifiée, le montant total, tenant compte du nombre de personnes, réglé par les clients ?",
+          "expectedCols": 3,
+          "expectedRows": 17,
+          "expectedLabel": "3 attributs, 17 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a4ea4e299358c19b27155192bb98e2eaf90297514109acc70ffc847fb7a903af"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q19",
+          "num": "19",
+          "statement": "Quels sont les pays pour lesquels il y a plus de réservations que pour l'Espagne ?",
+          "expectedCols": 1,
+          "expectedRows": 6,
+          "expectedLabel": "1 attribut, 6 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "ba8f8fcaba864cad646febdf1d182ff0d568641df9308becd8f2a56d7675df8a"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "imbrication",
+            "sous-requête",
+            "cte"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q20",
+          "num": "20",
+          "statement": "Quelles sont les catégories effectives comportant le plus de clients ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Requête Oracle - non auto-évaluable en ligne (à exécuter sous Oracle)."
+        },
+        {
+          "type": "question",
+          "id": "q21",
+          "num": "21",
+          "statement": "Quels sont les pays pour lesquels il y a le plus de réservations ?",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Requête Oracle - non auto-évaluable en ligne (à exécuter sous Oracle)."
+        },
+        {
+          "type": "question",
+          "id": "q22",
+          "num": "22",
+          "statement": "Donnez, pour chaque numéro et nom de client ayant fait une réservation pour le Kenya, le nombre total de réservations.",
+          "expectedCols": 3,
+          "expectedRows": 6,
+          "expectedLabel": "3 attributs, 6 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "5146539a23cf0e8e0c021fdae4661ce559e7b3c99ac32375449dddc8a5d02f9d"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "groupement",
+            "calcul-vertical",
+            "imbrication",
+            "semi-jointure"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q23",
+          "num": "23",
+          "statement": "Donnez, pour chaque pays ayant au moins un hôtel classé cinq étoiles, le nombre total d'hôtels, quel que soit leur nombre d'étoiles.",
+          "expectedCols": 2,
+          "expectedRows": 3,
+          "expectedLabel": "2 attributs, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "c3eff848b99d11cf2686494eb3e3581ec24c3aa367fa1ab5014a079682a08675"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "groupement",
+            "calcul-vertical",
+            "imbrication",
+            "semi-jointure"
+          ],
+          "sameAs": null
+        }
+      ]
+    },
+    {
+      "name": "Requêtes complexes",
+      "items": [
+        {
+          "type": "question",
+          "id": "q24",
+          "num": "24",
+          "statement": "Quelles sont les libellés des options gratuites incluses dans le voyage réservé par le Client Hubert Marin à destination d'Istanbul en date du 04/05/2004 ?",
+          "expectedCols": 1,
+          "expectedRows": 3,
+          "expectedLabel": "1 attribut, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "919755ae1427ec1488ab1f9212507868d7da605bf22cfc2b84828006d2721436"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "sélection",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q25",
+          "num": "25",
+          "statement": "Quelles sont les libellés des options gratuites pour au moins un voyage et payante pour au moins un autre ? Donner deux formulations différentes.",
+          "expectedCols": 1,
+          "expectedRows": 2,
+          "expectedLabel": "1 attribut, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "8021dc7db9265dd1815500244aca26bd6de594b47336bad853d7e0094f2a6ea6"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "null",
+            "cte"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q26",
+          "num": "26",
+          "statement": "Quelles sont les libellés des options toujours gratuites ? Proposer quatre formulations différentes.",
+          "expectedCols": 1,
+          "expectedRows": 5,
+          "expectedLabel": "1 attribut, 5 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "ababa4bcc8e8075d97aa6254109046f1c1eb8c507d5601d13cf52cd0e6b7df0b"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "anti-jointure",
+            "différence",
+            "imbrication",
+            "not-exists",
+            "jointure-externe",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q27",
+          "num": "27",
+          "statement": "Quels sont les numéros, noms et prénoms des autres clients ayant réservé pour un des voyages réservé par Arnaud Peyroche ?",
+          "expectedCols": 3,
+          "expectedRows": 7,
+          "expectedLabel": "3 attributs, 7 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "006a9a6b1e53972c424c24dbf770335373cfc82766bb07433bfc2004d9e2c750"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "sous-requête",
+            "cte"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q28",
+          "num": "28",
+          "statement": "Donnez le nombre de réservations et le nombre total de personnes pour les clients de la catégorie privilégié.",
+          "expectedCols": 2,
+          "expectedRows": 1,
+          "expectedLabel": "2 attributs, 1 tuple (6, 10)",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "73901416960859cd9bfee4280d958286eea2813c9b1b15be858fd13f994c19aa"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "calcul-vertical",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q29",
+          "num": "29",
+          "statement": "Quels sont les numéros, noms et prénoms des clients ayant fait une réservation avec un nombre total maximal de personnes ?",
+          "expectedCols": 3,
+          "expectedRows": 1,
+          "expectedLabel": "3 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "a9f1e5d9697d03e97032cff14e05067505ee6a769ccdb360070c5b0c2ed12625"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "calcul-vertical",
+            "imbrication",
+            "sous-requête",
+            "extrémum",
+            "null",
+            "cte"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q30",
+          "num": "30",
+          "statement": "Quel est le montant total des réservations du Client numéro 2101 ?",
+          "expectedCols": 1,
+          "expectedRows": 1,
+          "expectedLabel": "1 attribut, 1 tuple (14484)",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "75a7d3b95c9570ce6a14b8fc3444f87aad9d7c1e82600d4491322c87404e1898"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "calcul-vertical",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q31",
+          "num": "31",
+          "statement": "Quels sont les hôtels avec le plus d'étoiles ?",
+          "expectedCols": 1,
+          "expectedRows": 4,
+          "expectedLabel": "1 attribut, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "06717b5eeee58b22497dc2bccd8baadac04243cd74ba19d4ce6a4ba4b67352af"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "calcul-vertical",
+            "extrémum",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q32",
+          "num": "32",
+          "statement": "Quels sont les pays n'ayant pas d'hôtel avec le plus grand nombre d'étoiles ?",
+          "expectedCols": 1,
+          "expectedRows": 4,
+          "expectedLabel": "1 attribut, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "1fcf89fec19c84de3ae9e4b824a0be74d79f4865aa8b37f1a12ad88365017140"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "imbrication",
+            "calcul-vertical",
+            "extrémum",
+            "anti-jointure",
+            "distinct"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q33",
+          "num": "33",
+          "statement": "Donnez les numéros et ville de résidence des clients, y compris ceux sans voyage, ainsi que les identifiants, villes de départ et pays d'arrivée des voyages, y compris ceux sans client, à destination du Kenya partant de la ville de résidence des clients.",
+          "expectedCols": 5,
+          "expectedRows": 66,
+          "expectedLabel": "5 attributs, 66 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e417a315b5a777fcfb4cdbe23ab95f738c047a352ce986be8d73e69ad102ee48"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure-externe",
+            "sélection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q34",
+          "num": "34",
+          "statement": "Quels sont les numéros et noms des clients qui n'ont fait aucune réservation pour un voyage au Maroc ? Donnez deux formulations : une avec jointure externe et une avec test de non-existence.",
+          "expectedCols": 2,
+          "expectedRows": 26,
+          "expectedLabel": "2 attributs, 26 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "158c21b7ede111b682fed739c75f45ab4ec5e61615f5563699464463baf6e9b5"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure-externe",
+            "jointure",
+            "imbrication",
+            "not-exists",
+            "anti-jointure",
+            "cte"
+          ],
+          "sameAs": null
+        }
+      ]
+    }
+  ],
+  "subjectPdf": "sujet.pdf"
+}

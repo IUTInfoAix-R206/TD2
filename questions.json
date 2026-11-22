@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "tdId": "r2.06-td2",
   "tdLabel": "R2.06 - TD2",
-  "title": "Requêtes avec SQL",
+  "title": "Jointures externes, partitionnement et synthèse des requêtes",
   "intro": "Vérifiez que lors du TD précédent, vous avez laissé la base de données dans l'état initial ou réinitialisez-là. Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
   "database": {
     "name": "voyages",

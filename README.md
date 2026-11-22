@@ -1,4 +1,4 @@
-# R2.06 - TD2 - Requêtes avec SQL
+# R2.06 - TD2 - Jointures externes, partitionnement et synthèse des requêtes
 
 TD de bases de données de l'IUT d'Aix-Marseille (ressource R2.06, Exploitation d'une base de données).
 
